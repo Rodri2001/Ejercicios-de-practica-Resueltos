@@ -17,6 +17,18 @@ const resultado = sumarNumeros(3, 5)
 console.log(resultado)
 
 /*
+ejercicio de JavaScript para resolver:
+Escribe una función llamada "esPrimo" que tome un número como parámetro y devuelva true si el número es primo o false si no lo es.
+Recuerda que un número es primo si sólo es divisible por 1 y por sí mismo. Puedes empezar escribiendo el esqueleto de la función
+y luego llenarlo con el código necesario para determinar si el número es primo o no. ¡Buena suerte!
+ */
+
+function esPrimo (){
+    
+}
+
+
+/*
  * Complete the 'simpleArraySum' function below.
  *
  * The function is expected to return an INTEGER.
