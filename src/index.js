@@ -52,9 +52,15 @@ function esPrimo(num) {
 
 function simpleArraySum(ar) {
     // Escribe tu codigo
-
-
-
+   if (!ar.length){
+    return 0
+   } else 
+   if (ar.length){
+   const res = ar.reduce((acumulador,item)=>{
+  return acumulador = acumulador + item
+    },0)
+   return res
+   }
 }
 
 
