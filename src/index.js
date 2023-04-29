@@ -13,8 +13,8 @@ Puedes comenzar escribiendo el esqueleto de la función y luego llenarlo con el 
 function sumarNumeros (x , y){
 return x + y
 }
-const resultado = sumarNumeros(3, 5)
-console.log(resultado)
+
+
 
 /*
 ejercicio de JavaScript para resolver:
@@ -40,4 +40,12 @@ function simpleArraySum(ar) {
 
 
 
+}
+
+
+
+
+
+module.exports = {
+    sumarNumeros, esPrimo , simpleArraySum
 }
