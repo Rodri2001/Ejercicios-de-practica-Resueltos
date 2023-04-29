@@ -11,7 +11,7 @@ Puedes comenzar escribiendo el esqueleto de la función y luego llenarlo con el 
  */
 
 function sumarNumeros(x, y) {
-  //Escribe tu codigo
+    return x + y
 }
 
 
@@ -27,7 +27,19 @@ y luego llenarlo con el código necesario para determinar si el número es primo
 es decir, que si intentamos dividirlos por cualquier otro número, el resultado no es entero.
 */
 function esPrimo(num) {
-    // Escribe tu codigo
+    // Si el número es menor que 2, no puede ser primo
+    if (num < 2) {
+        return false;
+    }
+    // Itera sobre todos los números desde 2 hasta la mitad del número dado
+    for (let i = 2; i <= num / 2; i++) {
+        // Si el número es divisible por algún número en este rango, no es primo
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    // Si el bucle se ejecuta sin encontrar un divisor, el número es primo
+    return true;
 }
 
 
@@ -40,10 +52,15 @@ function esPrimo(num) {
 
 function simpleArraySum(ar) {
     // Escribe tu codigo
+   if (!ar.length){
+    return 0
+   } else 
+   if (ar.length){
+   const res = ar.reduce((acumulador,item)=>{
+  return acumulador = acumulador + item
+    },0)
+   return res
+   }
 }
 
 
-
-module.exports = {
-    sumarNumeros, esPrimo, simpleArraySum
-}
