@@ -10,8 +10,8 @@ Puedes comenzar escribiendo el esqueleto de la función y luego llenarlo con el 
 ¡Buena suerte!
  */
 
-function sumarNumeros (x , y){
-return x + y
+function sumarNumeros(x, y) {
+    return x + y
 }
 
 
@@ -22,17 +22,20 @@ Escribe una función llamada "esPrimo" que tome un número como parámetro y dev
 Recuerda que un número es primo si sólo es divisible por 1 y por sí mismo. Puedes empezar escribiendo el esqueleto de la función
 y luego llenarlo con el código necesario para determinar si el número es primo o no. ¡Buena suerte!
  */
+/*
+¿Qué son los números primos? Los números primos son aquellos que solo son divisibles entre ellos mismos y el 1,
+es decir, que si intentamos dividirlos por cualquier otro número, el resultado no es entero.
+*/
+function esPrimo() {
 
-function esPrimo (){
-    
 }
 
 
 /*
- * Complete the 'simpleArraySum' function below.
+ * Completa la función 'simpleArraySum' a continuación.
  *
- * The function is expected to return an INTEGER.
- * The function accepts INTEGER_ARRAY ar as parameter.
+ * Se espera que la función devuelva un entero.
+ * La función acepta entero_arreglo ar como parámetro.
  */
 
 function simpleArraySum(ar) {
@@ -47,5 +50,5 @@ function simpleArraySum(ar) {
 
 
 module.exports = {
-    sumarNumeros, esPrimo , simpleArraySum
+    sumarNumeros, esPrimo, simpleArraySum
 }
