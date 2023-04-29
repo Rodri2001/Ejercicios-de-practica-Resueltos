@@ -26,8 +26,20 @@ y luego llenarlo con el código necesario para determinar si el número es primo
 ¿Qué son los números primos? Los números primos son aquellos que solo son divisibles entre ellos mismos y el 1,
 es decir, que si intentamos dividirlos por cualquier otro número, el resultado no es entero.
 */
-function esPrimo() {
-
+function esPrimo(num) {
+    // Si el número es menor que 2, no puede ser primo
+    if (num < 2) {
+        return false;
+    }
+    // Itera sobre todos los números desde 2 hasta la mitad del número dado
+    for (let i = 2; i <= num / 2; i++) {
+        // Si el número es divisible por algún número en este rango, no es primo
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    // Si el bucle se ejecuta sin encontrar un divisor, el número es primo
+    return true;
 }
 
 
