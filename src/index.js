@@ -39,7 +39,7 @@ function esPrimo() {
  */
 
 function simpleArraySum(ar) {
-    // Write your code here
+    // Escribe tu codigo
 
 
 
