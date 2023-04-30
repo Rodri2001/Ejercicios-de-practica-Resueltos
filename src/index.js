@@ -11,9 +11,17 @@ Puedes comenzar escribiendo el esqueleto de la función y luego llenarlo con el 
  */
 
 function sumarNumeros(x, y) {
-  //Escribe tu codigo
+    //Escribe tu codigo
 }
 
+/**
+Ejercicio:
+Escribe una función llamada esPar que tome como parámetro un número y devuelva true si es par o false si es impar.
+ */
+
+function esPar(numero) {
+    // Escribe tu código aquí
+}
 
 
 /*
@@ -45,5 +53,8 @@ function simpleArraySum(ar) {
 
 
 module.exports = {
-    sumarNumeros, esPrimo, simpleArraySum
+    sumarNumeros,
+    esPrimo,
+    simpleArraySum,
+    esPar
 }

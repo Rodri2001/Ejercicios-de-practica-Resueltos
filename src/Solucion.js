@@ -15,6 +15,15 @@ function sumarNumeros(x, y) {
 }
 
 
+/**
+Ejercicio:
+Escribe una función llamada esPar que tome como parámetro un número y devuelva true si es par o false si es impar.
+ */
+
+function esPar(numero) {
+    // Escribe tu código aquí
+}
+
 
 /*
 ejercicio de JavaScript para resolver:
@@ -52,15 +61,15 @@ function esPrimo(num) {
 
 function simpleArraySum(ar) {
     // Escribe tu codigo
-   if (!ar.length){
-    return 0
-   } else 
-   if (ar.length){
-   const res = ar.reduce((acumulador,item)=>{
-  return acumulador = acumulador + item
-    },0)
-   return res
-   }
+    if (!ar.length) {
+        return 0
+    } else
+        if (ar.length) {
+            const res = ar.reduce((acumulador, item) => {
+                return acumulador = acumulador + item
+            }, 0)
+            return res
+        }
 }
 
 

@@ -1,13 +1,28 @@
 const {
    sumarNumeros,
    esPrimo,
-   simpleArraySum
+   simpleArraySum, 
+   esPar,
 } = require('../src/index.js')
 
 
 describe('Add Numers', function () {
    test('should add up the numbers', function () {
       expect(typeof sumarNumeros(2, 3)).toBe("number")
+   })
+})
+
+describe('esPar',() =>{
+   it('should return true if they are multiples of two', () => {
+      expect(esPar(2)).toBe(true)
+      expect(esPar(4)).toBe(true)
+      expect(esPar(6)).toBe(true)
+   })
+
+   it('should return false if they are not multiples of two',() => {
+      expect(esPar(1)).toBe(false)
+      expect(esPar(3)).toBe(false)
+      expect(esPar(5)).toBe(false)
    })
 })
 
@@ -30,13 +45,13 @@ describe('esPrimo', () => {
 });
 
 describe('simpleArraySum', () => {
-   it('debería sumar los elementos de un arreglo de números', () => {
+   it('should sum the elements of a number array', () => {
       expect(simpleArraySum([1, 2, 3, 4, 5])).toBe(15);
       expect(simpleArraySum([1, -2, 3, -4, 5])).toBe(3);
       expect(simpleArraySum([-1, -2, -3, -4, -5])).toBe(-15);
    });
 
-   it('debería devolver 0 para un arreglo vacío', () => {
+   it('should return 0 for an empty array', () => {
       expect(simpleArraySum([])).toBe(0);
    });
 });
