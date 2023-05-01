@@ -50,11 +50,32 @@ function simpleArraySum(ar) {
     // Escribe tu codigo
 }
 
+/**
+La tarea es crear una función que reciba dos argumentos: el número "x" y "n", donde "x" 
+es el número del que queremos obtener los múltiplos y "n" 
+es la cantidad de múltiplos que deseamos obtener.
+
+La función debe retornar un arreglo o lista 
+(dependiendo del lenguaje de programación que estés utilizando)
+ con los primeros "n" múltiplos de "x". Por ejemplo, si "x" es igual a 3 y "n" es igual a 5, 
+la función debería retornar un arreglo con los primeros 5 múltiplos de 3, que son 3, 6, 9, 12, y 15.
+ */
+
+function countBy(x, n) {
+    let z = [];
+    for (let i = 1; i <= n; i++) {
+        z.push(x * i);
+      }
+    return z;
+  }
+
+
 
 
 module.exports = {
     sumarNumeros,
     esPrimo,
     simpleArraySum,
-    esPar
+    esPar,
+    countBy
 }

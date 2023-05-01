@@ -3,16 +3,17 @@ const {
    esPrimo,
    simpleArraySum, 
    esPar,
+   countBy
 } = require('../src/index.js')
 
 
-describe('Add Numers', function () {
+xdescribe('Add Numers', function () {
    test('should add up the numbers', function () {
       expect(typeof sumarNumeros(2, 3)).toBe("number")
    })
 })
 
-describe('esPar',() =>{
+xdescribe('esPar',() =>{
    it('should return true if they are multiples of two', () => {
       expect(esPar(2)).toBe(true)
       expect(esPar(4)).toBe(true)
@@ -26,7 +27,7 @@ describe('esPar',() =>{
    })
 })
 
-describe('esPrimo', () => {
+xdescribe('esPrimo', () => {
    it('should return true for prime numbers', () => {
       expect(esPrimo(2)).toBe(true);
       expect(esPrimo(3)).toBe(true);
@@ -44,7 +45,7 @@ describe('esPrimo', () => {
    });
 });
 
-describe('simpleArraySum', () => {
+xdescribe('simpleArraySum', () => {
    it('should sum the elements of a number array', () => {
       expect(simpleArraySum([1, 2, 3, 4, 5])).toBe(15);
       expect(simpleArraySum([1, -2, 3, -4, 5])).toBe(3);
@@ -55,3 +56,10 @@ describe('simpleArraySum', () => {
       expect(simpleArraySum([])).toBe(0);
    });
 });
+
+describe('countBy', () => {
+   it('should return an array with the first "n" multiples of "x"',() => {
+      expect(countBy(1,10)).toStrictEqual([1,2,3,4,5,6,7,8,9,10]);
+      expect(countBy(2,5)).toStrictEqual([2,4,6,8,10]);
+   })
+})

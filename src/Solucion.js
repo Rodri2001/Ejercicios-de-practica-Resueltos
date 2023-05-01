@@ -22,6 +22,12 @@ Escribe una función llamada esPar que tome como parámetro un número y devuelv
 
 function esPar(numero) {
     // Escribe tu código aquí
+    if(numero % 2 === 0){
+        return true
+    }else
+    if(numero % 2 === 1){
+        return false
+    }
 }
 
 
@@ -71,5 +77,13 @@ function simpleArraySum(ar) {
             return res
         }
 }
+function countBy(x, n) {
+    let z = [];
+    for (let i = 1; i <= n; i++) {
+        z.push(x * i);
+      }
+    return z;
+  }
+
 
 
