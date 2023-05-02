@@ -46,6 +46,11 @@ function esPrimo(num) {
  * La función acepta entero_arreglo ar como parámetro.
  */
 
+/**
+ * 
+ * @param {Array} datos Almacena numeros para sumarlos en ar 
+ */
+
 function simpleArraySum(ar) {
     // Escribe tu codigo
 }
