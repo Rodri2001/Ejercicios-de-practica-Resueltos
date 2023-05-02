@@ -62,12 +62,8 @@ la función debería retornar un arreglo con los primeros 5 múltiplos de 3, que
  */
 
 function countBy(x, n) {
-    let z = [];
-    for (let i = 1; i <= n; i++) {
-        z.push(x * i);
-      }
-    return z;
-  }
+// escribe tu codigo abajo
+}
 
 
 
