@@ -91,6 +91,7 @@ function countBy(x, n) {
  * N es un número entero dentro del intervalo [1..100.000];
 cada elemento de la matriz A es un número entero dentro del intervalo [-1.000.000..1.000.000].
  */
+// dato adicional : esta funcion puede llegar a ser tomada en una entrevista
   function solution(A) {
     A.sort((a, b) => a - b); // ordena el arreglo en orden ascendente
     let smallestPositive = 1;
@@ -106,3 +107,11 @@ cada elemento de la matriz A es un número entero dentro del intervalo [-1.000.0
   
     return smallestPositive;
   }
+
+
+
+
+
+
+
+

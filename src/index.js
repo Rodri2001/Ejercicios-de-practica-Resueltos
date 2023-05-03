@@ -70,13 +70,28 @@ function countBy(x, n) {
 // escribe tu codigo abajo
 }
 
-
-
+//
+  function solution(A) {
+    A.sort((a, b) => a - b); // ordena el arreglo en orden ascendente
+    let smallestPositive = 1;
+  
+    // itera sobre el arreglo y encuentra el entero positivo más pequeño que no está en A
+    for (let i = 0; i < A.length; i++) {
+      if (A[i] > 0 && A[i] === smallestPositive) {
+        smallestPositive++;
+      } else if (A[i] > smallestPositive) {
+        break; // hemos encontrado el entero positivo más pequeño que no está en A
+      }
+    }
+  
+    return smallestPositive;
+  }
 
 module.exports = {
     sumarNumeros,
     esPrimo,
     simpleArraySum,
     esPar,
-    countBy
+    countBy,
+    solution
 }

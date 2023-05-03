@@ -3,7 +3,8 @@ const {
    esPrimo,
    simpleArraySum, 
    esPar,
-   countBy
+   countBy,
+   solution,
 } = require('../src/index.js')
 
 
@@ -57,9 +58,46 @@ xdescribe('simpleArraySum', () => {
    });
 });
 
-describe('countBy', () => {
+xdescribe('countBy', () => {
    it('should return an array with the first "n" multiples of "x"',() => {
       expect(countBy(1,10)).toStrictEqual([1,2,3,4,5,6,7,8,9,10]);
       expect(countBy(2,5)).toStrictEqual([2,4,6,8,10]);
    })
 })
+
+describe("solution", () => {
+   test("debe devolver 1 si el arreglo no contiene enteros positivos", () => {
+     const A = [-1, -3];
+     expect(solution(A)).toBe(1);
+   });
+ 
+   test("debe devolver el entero positivo más pequeño que no está en el arreglo", () => {
+     const A = [1, 3, 6, 4, 1, 2];
+     expect(solution(A)).toBe(5);
+   });
+ 
+   test("debe devolver 1 si el arreglo solo contiene el número 0", () => {
+     const A = [0];
+     expect(solution(A)).toBe(1);
+   });
+ 
+   test("debe devolver 1 si el arreglo contiene solo 1 elemento y es negativo", () => {
+     const A = [-5];
+     expect(solution(A)).toBe(1);
+   });
+ 
+   test("debe devolver 2 si el arreglo contiene solo 1 elemento y es 1", () => {
+     const A = [1];
+     expect(solution(A)).toBe(2);
+   });
+ 
+   test("debe devolver 2 si el arreglo contiene dos elementos y el menor es 1", () => {
+     const A = [1, 3];
+     expect(solution(A)).toBe(2);
+   });
+ 
+   test("debe devolver 1 si el arreglo contiene dos elementos y el menor es negativo", () => {
+     const A = [-3, -1];
+     expect(solution(A)).toBe(1);
+   });
+ });
