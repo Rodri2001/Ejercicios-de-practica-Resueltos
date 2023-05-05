@@ -1,11 +1,12 @@
 const {
    sumarNumeros,
    esPrimo,
-   simpleArraySum, 
+   simpleArraySum,
    esPar,
    countBy,
    solution,
    negativos,
+   findMultiples,
 } = require('../src/index.js')
 
 
@@ -15,14 +16,14 @@ xdescribe('Add Numers', function () {
    })
 })
 
-xdescribe('esPar',() =>{
+xdescribe('esPar', () => {
    it('should return true if they are multiples of two', () => {
       expect(esPar(2)).toBe(true)
       expect(esPar(4)).toBe(true)
       expect(esPar(6)).toBe(true)
    })
 
-   it('should return false if they are not multiples of two',() => {
+   it('should return false if they are not multiples of two', () => {
       expect(esPar(1)).toBe(false)
       expect(esPar(3)).toBe(false)
       expect(esPar(5)).toBe(false)
@@ -60,57 +61,64 @@ xdescribe('simpleArraySum', () => {
 });
 
 xdescribe('countBy', () => {
-   it('should return an array with the first "n" multiples of "x"',() => {
-      expect(countBy(1,10)).toStrictEqual([1,2,3,4,5,6,7,8,9,10]);
-      expect(countBy(2,5)).toStrictEqual([2,4,6,8,10]);
+   it('should return an array with the first "n" multiples of "x"', () => {
+      expect(countBy(1, 10)).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+      expect(countBy(2, 5)).toStrictEqual([2, 4, 6, 8, 10]);
    })
 })
 
 xdescribe("solution", () => {
    test("debe devolver 1 si el arreglo no contiene enteros positivos", () => {
-     const A = [-1, -3];
-     expect(solution(A)).toBe(1);
+      const A = [-1, -3];
+      expect(solution(A)).toBe(1);
    });
- 
-   test("debe devolver el entero positivo más pequeño que no está en el arreglo", () => {
-     const A = [1, 3, 6, 4, 1, 2];
-     expect(solution(A)).toBe(5);
-   });
- 
-   test("debe devolver 1 si el arreglo solo contiene el número 0", () => {
-     const A = [0];
-     expect(solution(A)).toBe(1);
-   });
- 
-   test("debe devolver 1 si el arreglo contiene solo 1 elemento y es negativo", () => {
-     const A = [-5];
-     expect(solution(A)).toBe(1);
-   });
- 
-   test("debe devolver 2 si el arreglo contiene solo 1 elemento y es 1", () => {
-     const A = [1];
-     expect(solution(A)).toBe(2);
-   });
- 
-   test("debe devolver 2 si el arreglo contiene dos elementos y el menor es 1", () => {
-     const A = [1, 3];
-     expect(solution(A)).toBe(2);
-   });
- 
-   test("debe devolver 1 si el arreglo contiene dos elementos y el menor es negativo", () => {
-     const A = [-3, -1];
-     expect(solution(A)).toBe(1);
-   });
- });
 
- describe('Numeros Negativos',()=>{
-   it('debe transformar el numero en negativo',()=>{
+   test("debe devolver el entero positivo más pequeño que no está en el arreglo", () => {
+      const A = [1, 3, 6, 4, 1, 2];
+      expect(solution(A)).toBe(5);
+   });
+
+   test("debe devolver 1 si el arreglo solo contiene el número 0", () => {
+      const A = [0];
+      expect(solution(A)).toBe(1);
+   });
+
+   test("debe devolver 1 si el arreglo contiene solo 1 elemento y es negativo", () => {
+      const A = [-5];
+      expect(solution(A)).toBe(1);
+   });
+
+   test("debe devolver 2 si el arreglo contiene solo 1 elemento y es 1", () => {
+      const A = [1];
+      expect(solution(A)).toBe(2);
+   });
+
+   test("debe devolver 2 si el arreglo contiene dos elementos y el menor es 1", () => {
+      const A = [1, 3];
+      expect(solution(A)).toBe(2);
+   });
+
+   test("debe devolver 1 si el arreglo contiene dos elementos y el menor es negativo", () => {
+      const A = [-3, -1];
+      expect(solution(A)).toBe(1);
+   });
+});
+
+xdescribe('Numeros Negativos', () => {
+   it('debe transformar el numero en negativo', () => {
       expect(negativos(9)).toBe(-9)
    })
-   it('No puede transformar el 0 en negativo',()=>{
+   it('No puede transformar el 0 en negativo', () => {
       expect(negativos(0)).toBe(0)
    })
-   it('Debe mantenerse en negativo',()=>{
+   it('Debe mantenerse en negativo', () => {
       expect(negativos(-9)).toBe(-9)
    })
- })
+})
+
+
+describe('findMultiples', () => {
+   it('debe devolver una lista de sus múltiplos', () => {
+      expect(findMultiples(2, 6)).toStrictEqual([2, 4, 6])
+   })
+})

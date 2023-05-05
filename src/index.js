@@ -80,6 +80,16 @@ function negativos (num){
 //Escribe tu codigo abajo de esta linea
 }
 
+/*
+En este sencillo ejercicio, construirás un programa que toma un valor,
+integer , y devuelve una lista de sus múltiplos hasta otro valor, limit .
+Si límite es un múltiplo de entero, debe ser incluido también. Sólo habrá enteros positivos pasados a la función,
+que no consistan en 0. El límite siempre será mayor que la base.
+*/
+function findMultiples(integer, limit) {
+    //Escribe tu codigo 
+  }
+
 //
   function solution(A) {
 // escribe tu codigo abajo
@@ -92,5 +102,7 @@ module.exports = {
     esPar,
     countBy,
     solution,
-    negativos
+    negativos,
+    findMultiples,
+
 }

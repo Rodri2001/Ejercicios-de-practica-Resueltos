@@ -101,6 +101,22 @@ function negativos (num){
   return num 
   }
 
+/*
+En este sencillo ejercicio, construirás un programa que toma un valor,
+integer , y devuelve una lista de sus múltiplos hasta otro valor, limit .
+Si límite es un múltiplo de entero, debe ser incluido también. Sólo habrá enteros positivos pasados a la función,
+que no consistan en 0. El límite siempre será mayor que la base.
+*/
+
+function findMultiples(integer, limit) {
+  // Escrbie tu codigo 
+  let result = []; // Se inicializa una variable "result" como un array vacío donde se guardarán los múltiplos.
+  for (let i = integer; i <= limit; i += integer) { // Se inicia un bucle "for" con la variable "i" iniciando en "integer", aumentando en "integer" en cada iteración, y deteniéndose cuando "i" es mayor que "limit".
+    result.push(i); // En cada iteración, se agrega el valor de "i" al array "result".
+  }
+  return result; // Se devuelve el array "result" con los múltiplos encontrados.
+}
+
 
 /**
  * dado un array A de N enteros, devuelva el menor entero positivo (mayor que 0) que no aparezca en A.
