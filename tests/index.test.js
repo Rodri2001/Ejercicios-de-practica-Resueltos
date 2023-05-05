@@ -5,6 +5,7 @@ const {
    esPar,
    countBy,
    solution,
+   negativos,
 } = require('../src/index.js')
 
 
@@ -65,7 +66,7 @@ xdescribe('countBy', () => {
    })
 })
 
-describe("solution", () => {
+xdescribe("solution", () => {
    test("debe devolver 1 si el arreglo no contiene enteros positivos", () => {
      const A = [-1, -3];
      expect(solution(A)).toBe(1);
@@ -101,3 +102,15 @@ describe("solution", () => {
      expect(solution(A)).toBe(1);
    });
  });
+
+ describe('Numeros Negativos',()=>{
+   it('debe transformar el numero en negativo',()=>{
+      expect(negativos(9)).toBe(-9)
+   })
+   it('No puede transformar el 0 en negativo',()=>{
+      expect(negativos(0)).toBe(0)
+   })
+   it('Debe mantenerse en negativo',()=>{
+      expect(negativos(-9)).toBe(-9)
+   })
+ })

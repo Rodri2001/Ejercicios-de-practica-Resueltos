@@ -70,21 +70,19 @@ function countBy(x, n) {
 // escribe tu codigo abajo
 }
 
+/*
+La tarea es crear una funcion que reciba un argumento: el numero "num" donde "num"
+va a recibir numeros positivos o negativos , la idea es que si le pasan numeros positivos 
+los transoforme en negativos , y si son negativos los deje en negativos .
+el 0 no puede ser negativo 
+ */
+function negativos (num){
+//Escribe tu codigo abajo de esta linea
+}
+
 //
   function solution(A) {
-    A.sort((a, b) => a - b); // ordena el arreglo en orden ascendente
-    let smallestPositive = 1;
-  
-    // itera sobre el arreglo y encuentra el entero positivo más pequeño que no está en A
-    for (let i = 0; i < A.length; i++) {
-      if (A[i] > 0 && A[i] === smallestPositive) {
-        smallestPositive++;
-      } else if (A[i] > smallestPositive) {
-        break; // hemos encontrado el entero positivo más pequeño que no está en A
-      }
-    }
-  
-    return smallestPositive;
+// escribe tu codigo abajo
   }
 
 module.exports = {
@@ -93,5 +91,6 @@ module.exports = {
     simpleArraySum,
     esPar,
     countBy,
-    solution
+    solution,
+    negativos
 }

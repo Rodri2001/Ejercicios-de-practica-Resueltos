@@ -85,6 +85,22 @@ function countBy(x, n) {
     return z;
   }
 
+  /*
+La tarea es crear una funcion que reciba un argumento: el numero "num" donde "num"
+va a recibir numeros positivos o negativos , la idea es que si le pasan numeros positivos 
+los transoforme en negativos , y si son negativos los deje en negativos .
+el 0 no puede ser negativo 
+ */
+function negativos (num){
+  if(num === 0){
+      return 0
+  } else 
+  if(num > 0){
+      return num * -1
+  }
+  return num 
+  }
+
 
 /**
  * dado un array A de N enteros, devuelva el menor entero positivo (mayor que 0) que no aparezca en A.
