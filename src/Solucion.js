@@ -11,7 +11,7 @@ Puedes comenzar escribiendo el esqueleto de la función y luego llenarlo con el 
  */
 
 function sumarNumeros(x, y) {
-    return x + y
+  return x + y
 }
 
 
@@ -21,12 +21,12 @@ Escribe una función llamada esPar que tome como parámetro un número y devuelv
  */
 
 function esPar(numero) {
-    // Escribe tu código aquí
-    if(numero % 2 === 0){
-        return true
-    }else
-    if(numero % 2 === 1){
-        return false
+  // Escribe tu código aquí
+  if (numero % 2 === 0) {
+    return true
+  } else
+    if (numero % 2 === 1) {
+      return false
     }
 }
 
@@ -42,19 +42,19 @@ y luego llenarlo con el código necesario para determinar si el número es primo
 es decir, que si intentamos dividirlos por cualquier otro número, el resultado no es entero.
 */
 function esPrimo(num) {
-    // Si el número es menor que 2, no puede ser primo
-    if (num < 2) {
-        return false;
+  // Si el número es menor que 2, no puede ser primo
+  if (num < 2) {
+    return false;
+  }
+  // Itera sobre todos los números desde 2 hasta la mitad del número dado
+  for (let i = 2; i <= num / 2; i++) {
+    // Si el número es divisible por algún número en este rango, no es primo
+    if (num % i === 0) {
+      return false;
     }
-    // Itera sobre todos los números desde 2 hasta la mitad del número dado
-    for (let i = 2; i <= num / 2; i++) {
-        // Si el número es divisible por algún número en este rango, no es primo
-        if (num % i === 0) {
-            return false;
-        }
-    }
-    // Si el bucle se ejecuta sin encontrar un divisor, el número es primo
-    return true;
+  }
+  // Si el bucle se ejecuta sin encontrar un divisor, el número es primo
+  return true;
 }
 
 
@@ -66,40 +66,40 @@ function esPrimo(num) {
  */
 
 function simpleArraySum(ar) {
-    // Escribe tu codigo
-    if (!ar.length) {
-        return 0
-    } else
-        if (ar.length) {
-            const res = ar.reduce((acumulador, item) => {
-                return acumulador = acumulador + item
-            }, 0)
-            return res
-        }
+  // Escribe tu codigo
+  if (!ar.length) {
+    return 0
+  } else
+    if (ar.length) {
+      const res = ar.reduce((acumulador, item) => {
+        return acumulador = acumulador + item
+      }, 0)
+      return res
+    }
 }
 function countBy(x, n) {
-    let z = [];
-    for (let i = 1; i <= n; i++) {
-        z.push(x * i);
-      }
-    return z;
+  let z = [];
+  for (let i = 1; i <= n; i++) {
+    z.push(x * i);
   }
+  return z;
+}
 
-  /*
+/*
 La tarea es crear una funcion que reciba un argumento: el numero "num" donde "num"
 va a recibir numeros positivos o negativos , la idea es que si le pasan numeros positivos 
 los transoforme en negativos , y si son negativos los deje en negativos .
 el 0 no puede ser negativo 
- */
-function negativos (num){
-  if(num === 0){
-      return 0
-  } else 
-  if(num > 0){
+*/
+function negativos(num) {
+  if (num === 0) {
+    return 0
+  } else
+    if (num > 0) {
       return num * -1
-  }
-  return num 
-  }
+    }
+  return num
+}
 
 /*
 En este sencillo ejercicio, construirás un programa que toma un valor,
@@ -124,21 +124,21 @@ function findMultiples(integer, limit) {
 cada elemento de la matriz A es un número entero dentro del intervalo [-1.000.000..1.000.000].
  */
 // dato adicional : esta funcion puede llegar a ser tomada en una entrevista
-  function solution(A) {
-    A.sort((a, b) => a - b); // ordena el arreglo en orden ascendente
-    let smallestPositive = 1;
-  
-    // itera sobre el arreglo y encuentra el entero positivo más pequeño que no está en A
-    for (let i = 0; i < A.length; i++) {
-      if (A[i] > 0 && A[i] === smallestPositive) {
-        smallestPositive++;
-      } else if (A[i] > smallestPositive) {
-        break; // hemos encontrado el entero positivo más pequeño que no está en A
-      }
+function solution(A) {
+  A.sort((a, b) => a - b); // ordena el arreglo en orden ascendente
+  let smallestPositive = 1;
+
+  // itera sobre el arreglo y encuentra el entero positivo más pequeño que no está en A
+  for (let i = 0; i < A.length; i++) {
+    if (A[i] > 0 && A[i] === smallestPositive) {
+      smallestPositive++;
+    } else if (A[i] > smallestPositive) {
+      break; // hemos encontrado el entero positivo más pequeño que no está en A
     }
-  
-    return smallestPositive;
   }
+
+  return smallestPositive;
+}
 
 
 

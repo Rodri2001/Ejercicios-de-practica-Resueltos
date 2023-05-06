@@ -80,6 +80,8 @@ function negativos (num){
 //Escribe tu codigo abajo de esta linea
 }
 
+
+
 /*
 En este sencillo ejercicio, construirás un programa que toma un valor,
 integer , y devuelve una lista de sus múltiplos hasta otro valor, limit .
