@@ -55,13 +55,13 @@ xdescribe('simpleArraySum', () => {
       expect(simpleArraySum([-1, -2, -3, -4, -5])).toBe(-15);
    });
 
-   it('should return 0 for an empty array', () => {
+   it('debe retornar 0 cuando el arreglo este vacio', () => {
       expect(simpleArraySum([])).toBe(0);
    });
 });
 
 xdescribe('countBy', () => {
-   it('should return an array with the first "n" multiples of "x"', () => {
+   it('debe devolver un array con los primeros "n" múltiplos de "x"', () => {
       expect(countBy(1, 10)).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
       expect(countBy(2, 5)).toStrictEqual([2, 4, 6, 8, 10]);
    })
