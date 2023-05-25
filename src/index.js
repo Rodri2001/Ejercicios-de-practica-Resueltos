@@ -80,7 +80,20 @@ function negativos (num){
 //Escribe tu codigo abajo de esta linea
 }
 
+// Alice y Bobo tienen un array con 3 numeros dentros
+// Si los alice tiene numeros mas grandes recibe un punto
+// Si los de bob tiene numeros mas grandes recibe un punto
 
+
+function compareTriplets(a, b) {
+  let alicepoint = 0;
+  let bobpoint = 0;
+  for(let i = 0; i < a.length; i++){
+  if(a[i] > b[i]){ alicepoint++}
+  else if(a[i] < b[i]){ bobpoint++}
+  }
+  return [alicepoint , bobpoint]
+  }
 
 /*
 En este sencillo ejercicio, construirás un programa que toma un valor,
@@ -106,5 +119,6 @@ module.exports = {
     solution,
     negativos,
     findMultiples,
-
+    compareTriplets,
+    
 }

@@ -7,6 +7,7 @@ const {
    solution,
    negativos,
    findMultiples,
+   compareTriplets
 } = require('../src/index.js')
 
 
@@ -117,8 +118,20 @@ xdescribe('Numeros Negativos', () => {
 })
 
 
-describe('findMultiples', () => {
+xdescribe('findMultiples', () => {
    it('debe devolver una lista de sus múltiplos', () => {
       expect(findMultiples(2, 6)).toStrictEqual([2, 4, 6])
    })
 })
+
+xdescribe('compareTriplets', () => {
+   it('debe devolver [1, 1] cuando a = [1, 2, 3] y b = [3, 2, 1]', () => {
+      const a = [1, 2, 3];
+      const b = [3, 2, 1];
+      const expected = [1, 1];
+
+      const result = compareTriplets(a, b);
+
+      expect(result).toEqual(expected);
+   });
+});
