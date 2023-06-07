@@ -7,7 +7,8 @@ const {
    solution,
    negativos,
    findMultiples,
-   compareTriplets
+   compareTriplets,
+   reverse
 } = require('../src/index.js')
 
 
@@ -135,3 +136,10 @@ xdescribe('compareTriplets', () => {
       expect(result).toEqual(expected);
    });
 });
+
+describe('reverse',()=>{
+   it('deberia dar vuelta un arreglo sin usar reverse',()=>{
+      expect(reverse([1,2,3])).toStrictEqual([3,2,1])
+      expect(reverse([6,2,1])).toStrictEqual([1,2,6])
+   })
+})

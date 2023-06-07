@@ -84,15 +84,12 @@ function negativos (num){
 // Si los alice tiene numeros mas grandes recibe un punto
 // Si los de bob tiene numeros mas grandes recibe un punto
 
+//Deberias invertir los numeros del arreglo [1 , 2 ,3 ] = [3 , 2 , 1] sin usar el metodo reverse
+
+const reverse = (prop) => {
+}
 
 function compareTriplets(a, b) {
-  let alicepoint = 0;
-  let bobpoint = 0;
-  for(let i = 0; i < a.length; i++){
-  if(a[i] > b[i]){ alicepoint++}
-  else if(a[i] < b[i]){ bobpoint++}
-  }
-  return [alicepoint , bobpoint]
   }
 
 /*
@@ -120,5 +117,6 @@ module.exports = {
     negativos,
     findMultiples,
     compareTriplets,
-    
+    reverse,
+
 }
