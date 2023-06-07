@@ -85,6 +85,7 @@ function negativos (num){
 // Si los de bob tiene numeros mas grandes recibe un punto
 
 //Deberias invertir los numeros del arreglo [1 , 2 ,3 ] = [3 , 2 , 1] sin usar el metodo reverse
+// intenta recrear la logica del metodo reverse
 
 const reverse = (prop) => {
 }
