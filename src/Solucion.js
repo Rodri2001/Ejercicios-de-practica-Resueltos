@@ -123,6 +123,19 @@ Si límite es un múltiplo de entero, debe ser incluido también. Sólo habrá e
 que no consistan en 0. El límite siempre será mayor que la base.
 */
 
+/**
+Invertir los numeros de un arreglo deberia de ser una tarea sencilla 
+ */
+const reverse = (prop) => {
+  let reverse = []
+
+  for(let i = 0; prop.length > i ; i++){
+   reverse.unshift(prop[i])
+  }
+return reverse
+}
+
+
 function findMultiples(integer, limit) {
   // Escrbie tu codigo 
   let result = []; // Se inicializa una variable "result" como un array vacío donde se guardarán los múltiplos.
